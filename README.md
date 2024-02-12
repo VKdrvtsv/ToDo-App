@@ -1,9 +1,7 @@
-# React TypeScript Starter Pack
+# ToDO App
 
-To use this template click `Use this template`
+This is an app for planning your life, where you can add, delete, change or filter your tasks.
 
-### Available Scripts
+This page was created using React, TypeScript and SASS preprocessor technologies. Also BEM methodology was used during creation this project.
 
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+[DEMO LINK](https://VKdrvtsv.github.io/ToDo-App/)
