@@ -9,15 +9,14 @@ export const deleteTodo = (id: number) => {
   return client.delete(`/todos/${id}`);
 };
 
-export const postTodo = (userId: number, title: string, id: number) => {
-  const data: Todo = {
-    id,
+export const postTodo = (userId: number, title: string) => {
+  const data: Omit<Todo, 'id'> = {
     userId,
     title,
     completed: false,
   };
 
-  return client.post<Todo>(`/todos?userId=${userId}`, data);
+  return client.post<Todo>('/todos', data);
 };
 
 export const patchTodo = (

@@ -43,8 +43,6 @@ export const Header: React.FC<Props> = ({ todos, setTempTodo }) => {
 
   const addTodo = (event: React.FormEvent) => {
     event.preventDefault();
-    const maxId = Math.max(0, ...todos.map(todo => todo.id));
-    const newTodoId = maxId + 1;
 
     if (!newTodoTitle) {
       setError('Title should not be empty');
@@ -52,7 +50,7 @@ export const Header: React.FC<Props> = ({ todos, setTempTodo }) => {
       setIsLoading(true);
 
       setTempTodo(tempTodo);
-      postTodo(USER_ID, newTodoTitle, newTodoId)
+      postTodo(USER_ID, newTodoTitle)
         .then(newTodoItem => {
           setTempTodo(null);
           setTodoList([...todos, newTodoItem]);
